@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>Welcome to the best Movie Review Website</title>
+    {% endif %}
+
+</head>
+<body>
+
+        <!-- Popular movie section  -->
+        <h3> Popular Movies</h3>
+         <ul>
+            {% for popular_movie in popular %}
+                <li>{{ popular_movie.title}}</li>
+            {% endfor %}
+        </ul>
+    
+</body>
+</html>
